@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+//Variables Imports
+@import '../src/app/dist/css/variables.scss';
+
+//Fonts Imports
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+
+//General Settings
+*{
+    margin: 0;
+    padding: 0;
+    font-family: roboto;
+    font-weight: 400;
+
+}
+
+body {
+
+    background: $primary-background-color;
+}
+
+textarea:focus, input:focus, button {
+    outline: none;
+}
+
+button {
+
+    cursor: pointer;
+}
+
+//Classes
+.container{
+    box-align: center;
+    text-align: center;
+    width: 350px;
+    margin: 50px auto;
+    
+}
+
+ul {
+
+    list-style: none;
+}

@@ -1,0 +1,24 @@
+<!--toDo List-->
+<section [ngClass]="{'empty': !TaskList.length}">
+<ul *ngIf="TaskList.length">
+    <li *ngFor="let item of TaskList; let i = index">
+        <input type="checkbox" [(ngModel)]="item.checked" >
+        <input type="text" [ngClass]="" [(ngModel)]="item.task" [ngClass]="{'checked': item.checked  }" >
+        
+        <button (click)="deleteTask(i)">
+            <img src="../../../../../assets/icons/Vector-2.svg" alt="">
+        </button>
+
+    </li>
+</ul>
+
+
+</section>
+
+
+
+<!--Add Task Button-->
+<app-addbtn (emmitTask)="setTask($event)"></app-addbtn>
+
+<!--Delete All Tasks Button-->
+<app-delete-all *ngIf="TaskList.length" (click)="deleteAll()"></app-delete-all>
